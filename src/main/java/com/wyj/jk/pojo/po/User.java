@@ -1,455 +1,196 @@
 package com.wyj.jk.pojo.po;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class User {
-    private String host;
+    private Long id;
 
-    private String user;
+    private Date createdTime;
 
-    private String selectPriv;
+    private String createdIp;
 
-    private String insertPriv;
+    private String phone;
 
-    private String updatePriv;
+    private String password;
 
-    private String deletePriv;
+    private Date loginTime;
 
-    private String createPriv;
+    private String loginIp;
 
-    private String dropPriv;
+    private Integer loginTimes;
 
-    private String reloadPriv;
+    private Integer status;
 
-    private String shutdownPriv;
+    private Integer type;
 
-    private String processPriv;
+    private Long inviterId;
 
-    private String filePriv;
+    private String inviteCode;
 
-    private String grantPriv;
+    private BigDecimal balance;
 
-    private String referencesPriv;
+    private String nickName;
 
-    private String indexPriv;
+    private String intro;
 
-    private String alterPriv;
+    private Long provinceId;
 
-    private String showDbPriv;
+    private Long cityId;
 
-    private String superPriv;
+    private Long schoolId;
 
-    private String createTmpTablePriv;
+    private String avatar;
 
-    private String lockTablesPriv;
-
-    private String executePriv;
-
-    private String replSlavePriv;
-
-    private String replClientPriv;
-
-    private String createViewPriv;
-
-    private String showViewPriv;
-
-    private String createRoutinePriv;
-
-    private String alterRoutinePriv;
-
-    private String createUserPriv;
-
-    private String eventPriv;
-
-    private String triggerPriv;
-
-    private String createTablespacePriv;
-
-    private String sslType;
-
-    private Integer maxQuestions;
-
-    private Integer maxUpdates;
-
-    private Integer maxConnections;
-
-    private Integer maxUserConnections;
-
-    private String plugin;
-
-    private String passwordExpired;
-
-    private Date passwordLastChanged;
-
-    private Short passwordLifetime;
-
-    private String accountLocked;
-
-    private byte[] sslCipher;
-
-    private byte[] x509Issuer;
-
-    private byte[] x509Subject;
-
-    private String authenticationString;
-
-    public String getHost() {
-        return host;
-    }
-
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public String getSelectPriv() {
-        return selectPriv;
-    }
-
-    public void setSelectPriv(String selectPriv) {
-        this.selectPriv = selectPriv;
-    }
-
-    public String getInsertPriv() {
-        return insertPriv;
-    }
-
-    public void setInsertPriv(String insertPriv) {
-        this.insertPriv = insertPriv;
-    }
-
-    public String getUpdatePriv() {
-        return updatePriv;
-    }
-
-    public void setUpdatePriv(String updatePriv) {
-        this.updatePriv = updatePriv;
-    }
-
-    public String getDeletePriv() {
-        return deletePriv;
-    }
-
-    public void setDeletePriv(String deletePriv) {
-        this.deletePriv = deletePriv;
-    }
-
-    public String getCreatePriv() {
-        return createPriv;
-    }
-
-    public void setCreatePriv(String createPriv) {
-        this.createPriv = createPriv;
-    }
-
-    public String getDropPriv() {
-        return dropPriv;
-    }
-
-    public void setDropPriv(String dropPriv) {
-        this.dropPriv = dropPriv;
-    }
-
-    public String getReloadPriv() {
-        return reloadPriv;
-    }
-
-    public void setReloadPriv(String reloadPriv) {
-        this.reloadPriv = reloadPriv;
-    }
-
-    public String getShutdownPriv() {
-        return shutdownPriv;
-    }
-
-    public void setShutdownPriv(String shutdownPriv) {
-        this.shutdownPriv = shutdownPriv;
-    }
-
-    public String getProcessPriv() {
-        return processPriv;
-    }
-
-    public void setProcessPriv(String processPriv) {
-        this.processPriv = processPriv;
-    }
-
-    public String getFilePriv() {
-        return filePriv;
-    }
-
-    public void setFilePriv(String filePriv) {
-        this.filePriv = filePriv;
-    }
-
-    public String getGrantPriv() {
-        return grantPriv;
-    }
-
-    public void setGrantPriv(String grantPriv) {
-        this.grantPriv = grantPriv;
-    }
-
-    public String getReferencesPriv() {
-        return referencesPriv;
-    }
-
-    public void setReferencesPriv(String referencesPriv) {
-        this.referencesPriv = referencesPriv;
-    }
-
-    public String getIndexPriv() {
-        return indexPriv;
-    }
-
-    public void setIndexPriv(String indexPriv) {
-        this.indexPriv = indexPriv;
-    }
-
-    public String getAlterPriv() {
-        return alterPriv;
-    }
-
-    public void setAlterPriv(String alterPriv) {
-        this.alterPriv = alterPriv;
-    }
-
-    public String getShowDbPriv() {
-        return showDbPriv;
-    }
-
-    public void setShowDbPriv(String showDbPriv) {
-        this.showDbPriv = showDbPriv;
-    }
-
-    public String getSuperPriv() {
-        return superPriv;
-    }
-
-    public void setSuperPriv(String superPriv) {
-        this.superPriv = superPriv;
-    }
-
-    public String getCreateTmpTablePriv() {
-        return createTmpTablePriv;
-    }
-
-    public void setCreateTmpTablePriv(String createTmpTablePriv) {
-        this.createTmpTablePriv = createTmpTablePriv;
-    }
-
-    public String getLockTablesPriv() {
-        return lockTablesPriv;
-    }
-
-    public void setLockTablesPriv(String lockTablesPriv) {
-        this.lockTablesPriv = lockTablesPriv;
-    }
-
-    public String getExecutePriv() {
-        return executePriv;
-    }
-
-    public void setExecutePriv(String executePriv) {
-        this.executePriv = executePriv;
-    }
-
-    public String getReplSlavePriv() {
-        return replSlavePriv;
-    }
-
-    public void setReplSlavePriv(String replSlavePriv) {
-        this.replSlavePriv = replSlavePriv;
-    }
-
-    public String getReplClientPriv() {
-        return replClientPriv;
-    }
-
-    public void setReplClientPriv(String replClientPriv) {
-        this.replClientPriv = replClientPriv;
-    }
-
-    public String getCreateViewPriv() {
-        return createViewPriv;
-    }
-
-    public void setCreateViewPriv(String createViewPriv) {
-        this.createViewPriv = createViewPriv;
-    }
-
-    public String getShowViewPriv() {
-        return showViewPriv;
-    }
-
-    public void setShowViewPriv(String showViewPriv) {
-        this.showViewPriv = showViewPriv;
-    }
-
-    public String getCreateRoutinePriv() {
-        return createRoutinePriv;
-    }
-
-    public void setCreateRoutinePriv(String createRoutinePriv) {
-        this.createRoutinePriv = createRoutinePriv;
-    }
-
-    public String getAlterRoutinePriv() {
-        return alterRoutinePriv;
+    public Long getId() {
+        return id;
     }
 
-    public void setAlterRoutinePriv(String alterRoutinePriv) {
-        this.alterRoutinePriv = alterRoutinePriv;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getCreateUserPriv() {
-        return createUserPriv;
+    public Date getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreateUserPriv(String createUserPriv) {
-        this.createUserPriv = createUserPriv;
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getEventPriv() {
-        return eventPriv;
+    public String getCreatedIp() {
+        return createdIp;
     }
 
-    public void setEventPriv(String eventPriv) {
-        this.eventPriv = eventPriv;
+    public void setCreatedIp(String createdIp) {
+        this.createdIp = createdIp;
     }
 
-    public String getTriggerPriv() {
-        return triggerPriv;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTriggerPriv(String triggerPriv) {
-        this.triggerPriv = triggerPriv;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getCreateTablespacePriv() {
-        return createTablespacePriv;
+    public String getPassword() {
+        return password;
     }
 
-    public void setCreateTablespacePriv(String createTablespacePriv) {
-        this.createTablespacePriv = createTablespacePriv;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getSslType() {
-        return sslType;
+    public Date getLoginTime() {
+        return loginTime;
     }
 
-    public void setSslType(String sslType) {
-        this.sslType = sslType;
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
     }
 
-    public Integer getMaxQuestions() {
-        return maxQuestions;
+    public String getLoginIp() {
+        return loginIp;
     }
 
-    public void setMaxQuestions(Integer maxQuestions) {
-        this.maxQuestions = maxQuestions;
+    public void setLoginIp(String loginIp) {
+        this.loginIp = loginIp;
     }
 
-    public Integer getMaxUpdates() {
-        return maxUpdates;
+    public Integer getLoginTimes() {
+        return loginTimes;
     }
 
-    public void setMaxUpdates(Integer maxUpdates) {
-        this.maxUpdates = maxUpdates;
+    public void setLoginTimes(Integer loginTimes) {
+        this.loginTimes = loginTimes;
     }
 
-    public Integer getMaxConnections() {
-        return maxConnections;
+    public Integer getStatus() {
+        return status;
     }
 
-    public void setMaxConnections(Integer maxConnections) {
-        this.maxConnections = maxConnections;
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
-    public Integer getMaxUserConnections() {
-        return maxUserConnections;
+    public Integer getType() {
+        return type;
     }
 
-    public void setMaxUserConnections(Integer maxUserConnections) {
-        this.maxUserConnections = maxUserConnections;
+    public void setType(Integer type) {
+        this.type = type;
     }
 
-    public String getPlugin() {
-        return plugin;
+    public Long getInviterId() {
+        return inviterId;
     }
 
-    public void setPlugin(String plugin) {
-        this.plugin = plugin;
+    public void setInviterId(Long inviterId) {
+        this.inviterId = inviterId;
     }
 
-    public String getPasswordExpired() {
-        return passwordExpired;
+    public String getInviteCode() {
+        return inviteCode;
     }
 
-    public void setPasswordExpired(String passwordExpired) {
-        this.passwordExpired = passwordExpired;
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode;
     }
 
-    public Date getPasswordLastChanged() {
-        return passwordLastChanged;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
-    public void setPasswordLastChanged(Date passwordLastChanged) {
-        this.passwordLastChanged = passwordLastChanged;
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
-    public Short getPasswordLifetime() {
-        return passwordLifetime;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setPasswordLifetime(Short passwordLifetime) {
-        this.passwordLifetime = passwordLifetime;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
-    public String getAccountLocked() {
-        return accountLocked;
+    public String getIntro() {
+        return intro;
     }
 
-    public void setAccountLocked(String accountLocked) {
-        this.accountLocked = accountLocked;
+    public void setIntro(String intro) {
+        this.intro = intro;
     }
 
-    public byte[] getSslCipher() {
-        return sslCipher;
+    public Long getProvinceId() {
+        return provinceId;
     }
 
-    public void setSslCipher(byte[] sslCipher) {
-        this.sslCipher = sslCipher;
+    public void setProvinceId(Long provinceId) {
+        this.provinceId = provinceId;
     }
 
-    public byte[] getX509Issuer() {
-        return x509Issuer;
+    public Long getCityId() {
+        return cityId;
     }
 
-    public void setX509Issuer(byte[] x509Issuer) {
-        this.x509Issuer = x509Issuer;
+    public void setCityId(Long cityId) {
+        this.cityId = cityId;
     }
 
-    public byte[] getX509Subject() {
-        return x509Subject;
+    public Long getSchoolId() {
+        return schoolId;
     }
 
-    public void setX509Subject(byte[] x509Subject) {
-        this.x509Subject = x509Subject;
+    public void setSchoolId(Long schoolId) {
+        this.schoolId = schoolId;
     }
 
-    public String getAuthenticationString() {
-        return authenticationString;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setAuthenticationString(String authenticationString) {
-        this.authenticationString = authenticationString;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }
