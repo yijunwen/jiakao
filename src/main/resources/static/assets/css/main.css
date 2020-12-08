@@ -82,7 +82,3 @@
 .form-control::placeholder {
     color: #9E9E9E;
 }
-
-.page-wrapper > .container-fluid {
-    padding-bottom: 80px;
-}
