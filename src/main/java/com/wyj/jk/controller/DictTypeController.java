@@ -1,6 +1,7 @@
 package com.wyj.jk.controller;
 
 import com.wyj.jk.pojo.po.DictType;
+import com.wyj.jk.pojo.query.DictTypeQuery;
 import com.wyj.jk.service.DictTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,8 +24,9 @@ public class DictTypeController {
     DictTypeService dictTypeService;
 
     @GetMapping("/list")
-    public String list(Model model){
-        model.addAttribute("data",dictTypeService.list());
+    public String list(DictTypeQuery query, Model model) {
+        dictTypeService.list(query);
+        model.addAttribute("query", query);
         return "pages/dictType";
     }
 

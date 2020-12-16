@@ -33,7 +33,7 @@
             <div class="navbar-header">
                 <!-- This is for the sidebar toggle which is visible on mobile only -->
                 <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
-                        class="ti-menu ti-close"></i></a>
+                            class="ti-menu ti-close"></i></a>
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
@@ -76,14 +76,14 @@
                 <ul class="navbar-nav mr-auto float-left">
                     <!-- This is  -->
                     <li class="nav-item"><a
-                            class="nav-link sidebartoggler d-none d-md-block waves-effect waves-dark"
-                            href="javascript:void(0)"><i class="ti-menu"></i></a></li>
+                                class="nav-link sidebartoggler d-none d-md-block waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-menu"></i></a></li>
                     <!-- ============================================================== -->
                     <!-- Search -->
                     <!-- ============================================================== -->
                     <li class="nav-item d-none d-md-block search-box"><a
-                            class="nav-link d-none d-md-block waves-effect waves-dark" href="javascript:void(0)"><i
-                            class="ti-search"></i></a>
+                                class="nav-link d-none d-md-block waves-effect waves-dark" href="javascript:void(0)"><i
+                                    class="ti-search"></i></a>
                         <form class="app-search">
                             <input type="text" class="form-control" placeholder="Search & enter">
                             <a class="srh-btn"><i class="ti-close"></i></a>
@@ -99,7 +99,8 @@
                     <!-- ============================================================== -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown">
-                            <img src="${ctx}/assets/imgs/users/2.jpg" alt="user" width="30" class="profile-pic rounded-circle">
+                            <img src="${ctx}/assets/imgs/users/2.jpg" alt="user" width="30"
+                                 class="profile-pic rounded-circle">
                         </a>
                         <div class="dropdown-menu mailbox dropdown-menu-right">
                             <ul class="dropdown-user list-style-none">
@@ -333,29 +334,31 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <div class="row">
-                <div class="col-md-4 col-12 form-group">
-                    <input type="text" class="form-control" placeholder="名称、值、简介">
+            <form action="${ctx}/dictTypes/list" method="get">
+                <div class="row">
+                    <div class="col-md-4 col-12 form-group">
+                        <input name="keyword" value="${query.keyword!}" type="text" class="form-control" placeholder="名称、值、简介">
+                    </div>
+                    <div class="col-md-4 col-6 form-group">
+                        <button type="button" class="btn btn-secondary waves-effect waves-light mr-1">
+                            <span class="btn-label"><i class="fas fa-redo"></i></span> 重置
+                        </button>
+                        <button type="submit" class="btn btn-info waves-effect waves-light mr-1">
+                            <span class="btn-label"><i class="fas fa-search"></i></span> 搜索
+                        </button>
+                    </div>
+                    <div class="col-md-4 col-6 form-group d-flex justify-content-end">
+                        <button type="button" id="btn-add"
+                                class="btn btn-info waves-effect waves-light mr-2">
+                            <span class="btn-label"><i class="fas fa-plus"></i></span> 添加
+                        </button>
+                        <button type="button" id="btn-batch-remove"
+                                class="btn btn-danger waves-effect waves-light disabled">
+                            <span class="btn-label"><i class="fas fa-trash"></i></span> 批量删除
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-4 col-6 form-group">
-                    <button class="btn btn-secondary waves-effect waves-light mr-1">
-                        <span class="btn-label"><i class="fas fa-redo"></i></span> 重置
-                    </button>
-                    <button class="btn btn-info waves-effect waves-light mr-1">
-                        <span class="btn-label"><i class="fas fa-search"></i></span> 搜索
-                    </button>
-                </div>
-                <div class="col-md-4 col-6 form-group d-flex justify-content-end">
-                    <button id="btn-add"
-                            class="btn btn-info waves-effect waves-light mr-2">
-                        <span class="btn-label"><i class="fas fa-plus"></i></span> 添加
-                    </button>
-                    <button id="btn-batch-remove"
-                            class="btn btn-danger waves-effect waves-light disabled">
-                        <span class="btn-label"><i class="fas fa-trash"></i></span> 批量删除
-                    </button>
-                </div>
-            </div>
+            </form>
 
             <div class="row">
                 <div class="col-12">
@@ -365,7 +368,8 @@
                                 <thead class="bg-inverse text-white">
                                 <tr>
                                     <th>
-                                        <input type="checkbox" id="cb_th" class="material-inputs filled-in chk-col-light-blue">
+                                        <input type="checkbox" id="cb_th"
+                                               class="material-inputs filled-in chk-col-light-blue">
                                         <label for="cb_th"></label>
                                     </th>
                                     <th>名称</th>
@@ -375,51 +379,26 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="cb_0" class="material-inputs filled-in chk-col-light-blue">
-                                        <label for="cb_0"></label>
-                                    </td>
-                                    <td>订单状态</td>
-                                    <td>order_state</td>
-                                    <td>用在订单管理中</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button class="btn btn-info btn-edit"><i class="ti-pencil-alt"></i></button>
-                                            <button class="btn btn-danger btn-remove"><i class="ti-trash"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="cb_1" class="material-inputs filled-in chk-col-light-blue">
-                                        <label for="cb_1"></label>
-                                    </td>
-                                    <td>地区类型</td>
-                                    <td>district_type</td>
-                                    <td>用以区分省份、城市</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button class="btn btn-info btn-edit"><i class="ti-pencil-alt"></i></button>
-                                            <button class="btn btn-danger btn-remove"><i class="ti-trash"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="cb_2" class="material-inputs filled-in chk-col-light-blue">
-                                        <label for="cb_2"></label>
-                                    </td>
-                                    <td>登录类型</td>
-                                    <td>login_type</td>
-                                    <td>区分第三方登录的类型</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <button class="btn btn-info btn-edit"><i class="ti-pencil-alt"></i></button>
-                                            <button class="btn btn-danger btn-remove"><i class="ti-trash"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <#list query.data as item>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="cb_1"
+                                                   class="material-inputs filled-in chk-col-light-blue">
+                                            <label for="cb_1"></label>
+                                        </td>
+                                        <td>${item.name}</td>
+                                        <td>${item.value}</td>
+                                        <td>${item.intro}</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button class="btn btn-info btn-edit"><i class="ti-pencil-alt"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-remove"><i class="ti-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </#list>
                                 </tbody>
                             </table>
                         </div>
@@ -431,7 +410,7 @@
                 <div class="col-md-6 col-12 form-group">
                     <label>
                         显示
-                        <select class="form-control form-control-sm">
+                        <select name="size" class="form-control form-control-sm">
                             <option value="10">10</option>
                             <option value="25">25</option>
                             <option value="50">50</option>
@@ -439,7 +418,7 @@
                         </select>
                         条
                     </label>
-                    ，共5页，共100条
+                    ，共${query.pages}页，共${query.count}条
                 </div>
                 <div class="col-md-6 col-12 d-flex justify-content-end">
                     <ul class="pagination">
@@ -586,45 +565,45 @@
                     <h4 class="modal-title" id="modal-form-label">添加</h4>
                     <button class="close" data-dismiss="modal">×</button>
                 </div>
-                    <div class="modal-body">
-                        <div class="form-group row">
-                            <label for="name"
-                                   class="col-3 col-form-label">名称</label>
-                            <div class="col-9">
-                                <input class="form-control" maxlength="15" placeholder="名称"
-                                       name="name" id="name" required>
-                                <div class="invalid-feedback">
-                                    请输入名称
-                                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="name"
+                               class="col-3 col-form-label">名称</label>
+                        <div class="col-9">
+                            <input class="form-control" maxlength="15" placeholder="名称"
+                                   name="name" id="name" required>
+                            <div class="invalid-feedback">
+                                请输入名称
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="value"
-                                   class="col-3 col-form-label">值</label>
-                            <div class="col-9">
-                                <input class="form-control" maxlength="15" placeholder="值"
-                                       name="value" id="value" required>
-                                <div class="invalid-feedback">
-                                    请输入值
-                                </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="value"
+                               class="col-3 col-form-label">值</label>
+                        <div class="col-9">
+                            <input class="form-control" maxlength="15" placeholder="值"
+                                   name="value" id="value" required>
+                            <div class="invalid-feedback">
+                                请输入值
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="intro"
-                                   class="col-3 col-form-label">简介简介</label>
-                            <div class="col-9">
+                    </div>
+                    <div class="form-group row">
+                        <label for="intro"
+                               class="col-3 col-form-label">简介简介</label>
+                        <div class="col-9">
                                 <textarea class="form-control" maxlength="100" rows="3"
                                           id="intro" name="intro" placeholder="请输入简介"></textarea>
-                                <div class="invalid-feedback">
-                                    请输入简介
-                                </div>
+                            <div class="invalid-feedback">
+                                请输入简介
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-light" data-dismiss="modal">关闭</button>
-                        <button type="submit" class="btn btn-info">保存</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-light" data-dismiss="modal">关闭</button>
+                    <button type="submit" class="btn btn-info">保存</button>
+                </div>
             </div>
         </div>
     </form>
@@ -716,6 +695,9 @@
                 $thCb.prop("checked", false)
             }
         })
+
+        //监听size变化
+
     })
 </script>
 </body>

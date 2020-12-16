@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/12/7
  */
 @SpringBootApplication
-@MapperScan("com.wyj.jk.mapper")
 public class JiaKaoApplication {
     public static void main(String[] args) {
         SpringApplication.run(JiaKaoApplication.class,args);
