@@ -21,7 +21,7 @@
         <!-- ============================================================== -->
         <div class="row page-titles">
             <div class="col-12">
-                <h3 class="text-themecolor">数据字典类型</h3>
+                <h3 class="text-themecolor">数据字典条目</h3>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
             <!-- ============================================================== -->
             <!-- Start Page Content -->
             <!-- ============================================================== -->
-            <form id="search-form" action="${ctx}/dictTypes/list" method="get">
+            <form id="search-form" action="${ctx}/dictItems/list" method="get">
                 <input name="size" type="hidden" value="${query.size}">
                 <input name="page" type="hidden" value="${query.page}">
                 <div class="row">
@@ -92,7 +92,6 @@
                                         </td>
                                         <td>${item.name}</td>
                                         <td>${item.value}</td>
-                                        <td>${item.intro}</td>
                                         <td>
                                             <div class="btn-group">
                                                 <button class="btn btn-info btn-edit"><i class="ti-pencil-alt"></i>
